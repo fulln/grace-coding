@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+
+git stash -qku
+./gralde clean check
+RESULT=$?
+git stash pop -q
+exit $RESULT
