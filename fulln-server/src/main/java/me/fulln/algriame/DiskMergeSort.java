@@ -1,16 +1,9 @@
-package me.fulln;
+package me.fulln.algriame;
 
-import java.io.BufferedReader;
-import java.io.Closeable;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.PriorityQueue;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class DiskMergeSort implements Closeable {
@@ -54,7 +47,7 @@ public class DiskMergeSort implements Closeable {
     static class MergeOut implements Closeable {
         private PrintWriter writer;
 
-        public MergeOut(String filename) {
+        MergeOut(String filename) {
             try {
                 this.writer = new PrintWriter(new FileOutputStream(filename));
             } catch (FileNotFoundException e) {
@@ -76,7 +69,7 @@ public class DiskMergeSort implements Closeable {
         private BufferedReader reader;
         private String cachedLine;
 
-        public MergeSource(String filename) {
+        MergeSource(String filename) {
             try {
                 FileReader fr = new FileReader(filename);
                 this.reader = new BufferedReader(fr);
@@ -160,10 +153,6 @@ public class DiskMergeSort implements Closeable {
                     Bin minBin = bins.remove(0);
                     this.out.write(minBin);
                 }
-                PriorityQueue<Integer> queue = new PriorityQueue<>((a,b)-> {
-                    return a - b;
-                });
-                queue.poll();
             } else {
                 Bin minBin = bins.remove(0);
                 this.out.write(minBin);
