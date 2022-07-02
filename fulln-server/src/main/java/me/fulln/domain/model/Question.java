@@ -8,7 +8,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+/**
+ * @author fulln
+ * @description 问题实体
+ * @date  Created in  15:12  2022/5/2.
+ **/
 @Getter
 @Setter
 @Entity

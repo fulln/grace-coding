@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * 启动类。
  *
  * @author fulln
- * @description 启动类
  * @date Created in  00:29  2022/4/1.
  **/
 
