@@ -8,7 +8,12 @@ import me.fulln.infrastructure.dto.pb.CommonMessage;
 import java.util.List;
 import java.util.Objects;
 
-public class protoBufDecoder extends ByteToMessageDecoder implements AbsDecoder{
+/**
+ * @author fulln
+ * @description pb decoder
+ * @date  Created in  14:26  2022/7/19.
+ **/
+public class ProtoBufDecoder extends ByteToMessageDecoder implements AbsDecoder{
 
     /**
      * Decode the from one {@link ByteBuf} to an other. This method will be called till either the input
