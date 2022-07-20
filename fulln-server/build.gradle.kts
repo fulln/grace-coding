@@ -28,7 +28,7 @@ dependencies {
     // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
     testImplementation("org.junit.jupiter:junit-jupiter-api")
 
-    implementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
     // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
 
@@ -84,11 +84,4 @@ tasks{
     }
 }
 
-sourceSets {
-    main {
-        proto {
-            srcDir("src/main/proto")
-        }
-    }
-}
 

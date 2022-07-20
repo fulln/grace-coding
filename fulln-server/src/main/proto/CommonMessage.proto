@@ -7,7 +7,7 @@ option java_package = "me.fulln.infrastructure.dto.pb";
 message Msg{
   uint32 id = 1;
   string  content = 2;
-  string  token =3;
+  string  token = 3;
 }
 
 enum HeadType{
@@ -15,8 +15,8 @@ enum HeadType{
   LOGIN_RESPONSE = 1; // 登陆响应
   LOGOUT_REQUEST = 2; // 登出请求
   LOGOUT_RESPONSE = 3; // 登出响应
-  KEEPALIVE_REQUEST = 4; // 心跳请求
-  KEEPALIVE_RESPONSE = 5; // 心跳响应
+  KEEP_ALIVE_REQUEST = 4; // 心跳请求
+  KEEP_ALIVE_RESPONSE = 5; // 心跳响应
   MESSAGE_REQUEST = 6; // 消息请求
   MESSAGE_RESPONSE = 7; // 消息响应
   MESSAGE_NOTICE = 8  ;// 消息通知
@@ -24,8 +24,8 @@ enum HeadType{
 
 message LoginRequest{
   string uid = 1;           // 用户id
-  string deviceId  =2;      // 设备id
-  string token  =3;         // 用户token
+  string deviceId = 2;      // 设备id
+  string token = 3;         // 用户token
   uint32 platform = 4;      // 客户端平台
-  string  appversion =5;    // app版本信息
+  string appVersion = 5;    // app版本信息
 }
