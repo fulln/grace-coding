@@ -5,7 +5,7 @@ plugins {
     java
     checkstyle
     idea
-    id("org.springframework.boot") version "2.6.5"
+    id("org.springframework.boot") version "2.4.2"
     id("com.google.protobuf") version "0.8.18"
 }
 
@@ -24,6 +24,9 @@ dependencies {
     runtimeOnly("mysql:mysql-connector-java")
     runtimeOnly("org.flywaydb:flyway-core")
 
+    // sentinel
+    implementation("com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel:2021.1")
+
     testImplementation(platform("org.junit:junit-bom:5.8.2"))
     // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
     testImplementation("org.junit.jupiter:junit-jupiter-api")
@@ -37,6 +40,10 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok:1.18.20")
     testAnnotationProcessor("org.projectlombok:lombok:1.18.20")
     testCompileOnly("org.projectlombok:lombok:1.18.20")
+
+    // https://mvnrepository.com/artifact/io.springfox/springfox-swagger2
+    implementation("io.springfox:springfox-swagger2:3.0.0")
+
 
 
     compileOnly("org.projectlombok:lombok:1.18.20")

@@ -20,7 +20,6 @@ import java.util.List;
 @RestController
 @RequestMapping("/question")
 public class QuestionController {
-
     @Autowired
     private QuestionAppService questionAppService;
 
@@ -34,5 +33,11 @@ public class QuestionController {
     @GetMapping("/list")
     public List<QuestionListResp> list(@RequestBody QuestionReq req){
         return Collections.emptyList();
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public String delete(@PathVariable Long id) {
+        questionAppService.delete(id);
+        return "SUCCESS";
     }
 }
