@@ -1,4 +1,4 @@
-package me.fulln.facade.h5;
+package me.fulln.study.sentinel.controller;
 
 import com.alibaba.csp.sentinel.Entry;
 import com.alibaba.csp.sentinel.SphU;
@@ -9,26 +9,20 @@ import com.alibaba.csp.sentinel.slots.block.authority.AuthorityRule;
 import com.alibaba.csp.sentinel.slots.block.authority.AuthorityRuleManager;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRuleManager;
-import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.PostConstruct;
 import java.util.Collections;
 import java.util.List;
 
 @Slf4j
-@Api(value = "sentinel 测试接口", tags = "sentinel 测试接口")
-@RestController
-@RequestMapping("/sentinel")
+//@RestController
 public class SentinelController {
 
     public static final String RESOURCE_NAME = "flowLimit";
 
-    @ApiOperation(value = "限流接口", notes = "QPS限流接口")
     @GetMapping("/flowLimit")
     public String flowLimit() {
         Entry entry = null;

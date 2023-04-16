@@ -27,5 +27,5 @@ message LoginRequest{
   string deviceId = 2;      // 设备id
   string token = 3;         // 用户token
   uint32 platform = 4;      // 客户端平台
-  string appVersion = 5;    // app版本信息
+  string appversion = 5;    // app版本信息
 }

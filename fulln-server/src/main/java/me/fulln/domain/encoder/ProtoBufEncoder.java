@@ -22,7 +22,6 @@ public class ProtoBufEncoder extends MessageToByteEncoder<CommonMessage.Msg> imp
         byte[] bytes = msg.toByteArray();
         String a[]  = new String[10];
         a[1] = "10";
-
         int length = bytes.length;
         out.writeShort(length);
         // 开始写对应消息

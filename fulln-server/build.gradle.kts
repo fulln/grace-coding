@@ -21,11 +21,9 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("javax.transaction:javax.transaction-api:1.3")
     runtimeOnly("mysql:mysql-connector-java")
     runtimeOnly("org.flywaydb:flyway-core")
-
-    // sentinel
-    implementation("com.alibaba.cloud:spring-cloud-starter-alibaba-sentinel:2021.1")
 
     testImplementation(platform("org.junit:junit-bom:5.8.2"))
     // https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api
@@ -51,15 +49,15 @@ dependencies {
     compileOnly("com.google.protobuf:protobuf-java:3.20.1")
 }
 
-java{
-    toolchain{
+java {
+    toolchain {
         languageVersion.set(JavaLanguageVersion.of(17))
     }
 }
 
-checkstyle{
-    maxWarnings= 10;
-    toolVersion= "10.0"
+checkstyle {
+    maxWarnings = 10;
+    toolVersion = "10.0"
 }
 
 protobuf {
@@ -71,7 +69,7 @@ protobuf {
         // Optional: an artifact spec for a protoc plugin, with "grpc" as
         // the identifier, which can be referred to in the "plugins"
         // container of the "generateProtoTasks" closure.
-        id("grpc"){
+        id("grpc") {
             artifact = "io.grpc:protoc-gen-grpc-java:1.25.0"
         }
     }
@@ -85,8 +83,8 @@ protobuf {
     }
 }
 
-tasks{
-    test{
+tasks {
+    test {
         useJUnitPlatform()
     }
 }
