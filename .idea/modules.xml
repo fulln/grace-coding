@@ -4,9 +4,6 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/fulln-server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/fulln-server.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/fulln-server.test.iml" filepath="$PROJECT_DIR$/.idea/modules/fulln-server.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/grace-coding.fulln-server.main.iml" filepath="$PROJECT_DIR$/.idea/modules/grace-coding.fulln-server.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/grace-coding.fulln-server.test.iml" filepath="$PROJECT_DIR$/.idea/modules/grace-coding.fulln-server.test.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/study.main.iml" filepath="$PROJECT_DIR$/.idea/modules/study.main.iml" />
     </modules>
   </component>
 </project>
