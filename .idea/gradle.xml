@@ -4,9 +4,17 @@
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+          </set>
+        </option>
+      </GradleProjectSettings>
+      <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/fulln-server" />
-        <option name="gradleHome" value="$PROJECT_DIR$/../../gradle/gradle-7.4.2" />
+        <option name="gradleHome" value="$USER_HOME$/opt/gradle-7.4.1" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/fulln-server" />
@@ -16,7 +24,7 @@
       <GradleProjectSettings>
         <option name="distributionType" value="LOCAL" />
         <option name="externalProjectPath" value="$PROJECT_DIR$/study" />
-        <option name="gradleHome" value="$PROJECT_DIR$/../../gradle/gradle-7.4.2" />
+        <option name="gradleHome" value="$USER_HOME$/opt/gradle-7.4.1" />
         <option name="modules">
           <set>
             <option value="$PROJECT_DIR$/study" />

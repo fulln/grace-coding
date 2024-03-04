@@ -1,10 +1,11 @@
+import org.gradle.internal.impldep.org.junit.platform.launcher.TagFilter.excludeTags
 import org.springframework.boot.gradle.plugin.SpringBootPlugin
 
 
 plugins {
     java
     idea
-    id("org.springframework.boot") version "2.4.2"
+    id("org.springframework.boot") version "2.5.6"
 }
 
 repositories {
@@ -24,16 +25,24 @@ dependencies {
 
     annotationProcessor("org.projectlombok:lombok:1.18.20")
 
-    testAnnotationProcessor("org.projectlombok:lombok:1.18.20")
-
     compileOnly("org.apache.logging.log4j:log4j-core:2.17.1")
     compileOnly("org.projectlombok:lombok:1.18.20")
 
+    testAnnotationProcessor("org.projectlombok:lombok:1.18.20")
+    testImplementation(platform("org.junit:junit-bom:5.8.2"))
+    testImplementation("org.junit.jupiter:junit-jupiter-api")
+    testCompileOnly("org.springframework.boot:spring-boot-starter-test")
     testCompileOnly("org.projectlombok:lombok:1.18.20")
 }
 
 java {
     toolchain {
         languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+
+tasks {
+    test {
+        useJUnitPlatform()
     }
 }
